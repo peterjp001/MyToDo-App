@@ -1,0 +1,10 @@
+<div class="card-header">
+  <form [formGroup]="todoForm">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="New Task" formControlName="task"  aria-describedby="button-addon2">
+      <button class="btn btn-outline-secondary" (click)="addTodo()" type="button" id="button-addon2">
+        <i class="bi bi-plus-square-fill"></i> New Task
+      </button>
+    </div>
+  </form>
+</div>
