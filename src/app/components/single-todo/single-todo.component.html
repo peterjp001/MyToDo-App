@@ -1,0 +1,7 @@
+<li class="list-group-item"   [ngClass]="{bg_danger: task.id === taskSelector}" [ngStyle]="">
+  <input class="form-check-input me-1" type="checkbox"
+         [value]="task.id" [id]="task.id"
+         (change)="onSelectTask({$event : $event})"
+  >
+  <label class="form-check-label stretched-link" [for]="task.id">{{task.task}} {{task.id}}</label>
+</li>

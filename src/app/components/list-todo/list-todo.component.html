@@ -1,8 +1,5 @@
 <div class="card-body">
   <ul class="list-group">
-    <li class="list-group-item" *ngFor="let task of listTask"  >
-      <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched" (click)="selectTask(task.id)">
-      <label class="form-check-label stretched-link" for="firstCheckboxStretched">{{task.task}} {{task.id}}</label>
-    </li>
+    <app-single-todo *ngFor="let task of listTask" [task]="task"></app-single-todo>
   </ul>
 </div>

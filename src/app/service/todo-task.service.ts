@@ -35,8 +35,12 @@ export class TodoTaskService {
     return task;
     }
   }
-  addTask(newTask:TodoTaskModel):void{
-    this.tasks.push(newTask);
+  addTask(newTask:{id:number, task:string}):void{
+    const task:TodoTaskModel = {
+      ...newTask,
+      id:this. getAllTasks()[this.getAllTasks().length - 1].id + 1,
+    }
+    this.tasks.push(task);
   }
 
 

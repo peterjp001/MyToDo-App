@@ -17,8 +17,4 @@ export class ListTodoComponent implements OnInit {
     this.listTask = this.taskService.getAllTasks();
   }
 
-  selectTask(id: number) {
-    console.log(id)
-
-  }
 }
